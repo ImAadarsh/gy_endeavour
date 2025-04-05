@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charSet="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <title>Shared on THEMELOCK.COM - Gauarva - TailwindCSS Personal Portfolio Template</title>
+    
+    <meta name="author" content="Platol" />
+    <meta name="description" content="TailwindCSS Personal Portfolio Template" />
+    <meta property="og:title" content="Gauarva - TailwindCSS Personal Portfolio Template" />
+    <meta property="og:description" content="TailwindCSS Personal Portfolio Template" />
+    <meta property="og:image" content="./images/ogimage.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:title" content="Gauarva - TailwindCSS Personal Portfolio Template" />
+    <meta name="twitter:image" content="./images/ogimage.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="TailwindCSS Personal Portfolio Template" />
+    
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="./plugins/aos/aos.css">
+    <link rel="stylesheet" href="./styles/output.css">
+  </head>
+
+  <body>
+    <!-- start of header -->
+    <header class="fixed top-0 z-[9000] w-full header [&.invisible]:-translate-y-full">
+      <div class="container">
+        <div class="flex justify-between py-6 items-center relative">
+          <!-- logo -->
+          <div class="hideOnScroll lg:[&.scrolled]:opacity-0 lg:[&.scrolled]:-translate-x-8 w-1/4 transition-all duration-300">
+            <a class="inline-block align-middle" href="./index.html">
+              <img alt="Gauarva" width="80" height="29" src="./images/logo.svg" />
+            </a>
+          </div>
+
+          <!-- navbar -->
+          <nav class="navbar">
+            <span class="indicator"></span>
+            <a href="./index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a class="active" href="./project.html">Project</a>
+            <a href="./blog.html">Blog</a>
+            <a href="./contact.html">Contact</a>
+          </nav>
+          <div class="navOverlay"></div>
+
+          <!-- toggle mobile-nav -->
+          <button type="button" aria-label="Toggle Mobile Navigation" class="navToggler">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M4 8l16 0"></path>
+              <path d="M4 16l16 0"></path>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M18 6l-12 12"></path>
+              <path d="M6 6l12 12"></path>
+            </svg>
+          </button>
+
+          <!-- social links -->
+          <div class="hideOnScroll lg:[&.scrolled]:opacity-0 lg:[&.scrolled]:translate-x-8 w-1/4 transition-all duration-300 text-right text-sm hidden lg:block">
+            <span class="block text-white/75 mb-1">Social Links:</span>
+            <ul class="inline-flex gap-x-4">
+              <li class="inline-block hover:opacity-75 transition-op duration-300">
+                <a href="https://facebook.com/" class="link">FB</a>
+              </li>
+              <li class="inline-block hover:opacity-75 transition-op duration-300">
+                <a href="https://twitter.com/" class="link">TW</a>
+              </li>
+              <li class="inline-block hover:opacity-75 transition-op duration-300">
+                <a href="https://linkedin.com/" class="link">IN</a>
+              </li>
+              <li class="inline-block hover:opacity-75 transition-op duration-300">
+                <a href="https://github.com/" class="link">GITHUB</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- end of header -->
+
+    <!-- start of main -->
+    <main class="bg-dark relative z-10 pt-[92px] lg:pt-[106px] min-h-[82vh] overflow-hidden">
+      
+      <section class="pt-24 pb-28">
+        <div class="container">
+          <div class="row justify-center banner">
+            <div class="md:col-7 lg:col-6" data-aos="fade-up-sm">
+              <!-- project tag -->
+              <span class="inline-block text-sm rounded-full bg-[#efefef] px-3 py-1 capitalize text-black mb-6">Art</span>
+              <!-- project title -->
+              <h1 class="text-4xl md:text-5xl mb-4 !leading-tight">Shuvashini</h1>
+              <!-- project info -->
+              <p>Color Splash</p>
+              
+              <!-- project details info -->
+              <ul class="row text-white mt-4">
+                <li class="col-6 mt-8">
+                  <p class="text-white/50 text-xs uppercase tracking-wider mb-2">Client</p>
+                  <div class="[&_a]:underline [&_a]:hover:no-underline [&_li]:mt-1">
+                    <p>BocahKecil</p>
+                  </div>
+                </li>
+                <li class="col-6 mt-8">
+                  <p class="text-white/50 text-xs uppercase tracking-wider mb-2">Timeline</p>
+                  <div class="[&_a]:underline [&_a]:hover:no-underline [&_li]:mt-1">
+                    <p>3 Months</p>
+                  </div>
+                </li>
+                <li class="col-6 mt-8">
+                  <p class="text-white/50 text-xs uppercase tracking-wider mb-2">Services</p>
+                  <div class="[&_a]:underline [&_a]:hover:no-underline [&_li]:mt-1">
+                    <ul>
+                      <li>Branding</li>
+                      <li>Website design</li>
+                      <li>Marketing and Planning</li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="col-6 mt-8">
+                  <p class="text-white/50 text-xs uppercase tracking-wider mb-2">website</p>
+                  <div class="[&_a]:underline [&_a]:hover:no-underline [&_li]:mt-1">
+                    <p>
+                      <a href="https://Gauarva.io">https://Gauarva.io</a>
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="md:col-5 lg:col-4 mt-12 md:mt-0" data-aos="fade-up-sm" data-aos-delay="100">
+              <!-- project image -->
+              <img alt="Shuvashini" loading="lazy" width="500" height="500" class="aspect-square object-cover object-center rounded-lg bg-light/20 w-full md:w-[500px]" src="./images/project/04.jpg" />
+            </div>
+
+            <!-- divider -->
+            <div class="lg:col-10">
+              <hr class="opacity-5 mt-28 mb-24" />
+            </div>
+          </div>
+
+          <!-- start of project content -->
+          <div class="row justify-center" data-aos="fade-in">
+            <div class="lg:col-10">
+              <article class="content content-light [&_img]:w-full">
+                <h2>We couldn't be happier with the branding strategy developed.</h2>
+                <p>Throughout the process, Gauarva's collaborative approach and open communication ensured a seamless experience. The outstanding results achieved have elevated our brand and positioned us for long-term success. We couldn't be happier with Gauarva's work.</p>
+                <p>
+                  <img src="./images/project/01-00.jpg" alt="Shuvashini 04." />
+                </p>
+                <h2>Challenge</h2>
+                <p>Choosing Gauarva as our branding agency was one of the best decisions we made. Their professionalism, creativity, and dedication made them a true partner in our brand journey. Gauarva's team took the time to understand our goals and values, crafting a comprehensive brand strategy that perfectly aligned with our vision. They translated this strategy into a visually captivating and impactful visual identity that truly represents our brand essence.</p>
+                <p>Gauarva's collaborative approach and open communication ensured a seamless experience. The outstanding results achieved have elevated our brand and positioned us for long-term success. We couldn't be happier with Gauarva's work.</p>
+                <h2>Solution</h2>
+                <p>The client expresses great satisfaction with their decision to choose Gauarva as their branding agency, describing it as one of the best decisions they made. Gauarva is commended for their professionalism, creativity, and dedication, which resulted in a strong partnership throughout the client's brand journey. Gauarva's team took the time to deeply understand the client's goals and values, leading to the development of a comprehensive brand strategy that aligned perfectly with the client's vision. This strategy was then translated into a visually captivating and impactful visual identity that truly represents the essence of the brand.</p>
+                <p>The client appreciates Gauarva's collaborative approach and open communication, highlighting the seamless experience they had while working together. The outstanding results achieved by Gauarva have successfully elevated the client's brand and positioned them for long-term success. Overall, the client expresses utmost satisfaction with the work done by Gauarva.</p>
+                <h2>Result</h2>
+                <p>The result is our brand and positioned us for long-term success. We couldn't be happier with Gauarva's work.</p>
+                <div class="image columns-1 sm:columns-2 gap-8">
+                  <p>
+                    <img src="./images/project/01-01.jpg" alt="Shuvashini 05." />
+                    <img src="./images/project/01-02.jpg" alt="Shuvashini 02." />
+                    <img src="./images/project/01-03.jpg" alt="Shuvashini 03." />
+                    <img src="./images/project/01-04.jpg" alt="Shuvashini 04." />
+                  </p>
+                </div>
+                <p>Gauarva's collaborative approach and open communication, highlighting the seamless experience they had while working together. The outstanding results achieved by Gauarva have successfully elevated the client's brand and positioned them for long-term success.</p>
+              </article>
+            </div>
+          </div>
+          <!-- end project content -->
+        </div>
+      </section>
+
+      <!-- start of next-project -->
+      <section class="py-28 bg-white text-dark rounded-b-2xl overflow-hidden">
+        <div class="container">
+          <div class="mb-16">
+            <!-- next-project -->
+            <h2 class="text-4xl lg:text-5xl font-secondary font-medium -mt-[6px] text-center">Next Project</h2>
+          </div>
+          <div class="row justify-center">
+            <div class="lg:col-6">
+              <div data-aos="true" class="rounded-lg overflow-hidden relative group h-full">
+                <span class="absolute h-full group-[.aos-animate]:h-0 w-full z-30 duration-700 left-0 bottom-0" style="background-color:#55487D;transition-delay:0ms"></span>
+                
+                <!-- next-project image -->
+                <img alt="Curoloy" loading="lazy" width="620" height="420" class="scale-150 group-[.aos-animate]:scale-100 duration-700 group-hover:!scale-125 object-cover w-full bg-light/20 has-twoColumns h-[376px]" style="height:376px" src="./images/project/02.jpg" />
+                <div class="absolute inset-0 z-20 flex justify-center flex-col p-8">
+                  <span class="absolute h-full w-full duration-300 left-0 bottom-0 opacity-0 bg-overlay group-hover:opacity-100 -z-10 pointer-events-none"></span>
+                  <div class="flex items-center justify-between opacity-0 -mt-1 group-hover:opacity-100 group-hover:mt-0 duration-300 group-hover:delay-300">
+                    <!-- next-project tag -->
+                    <span class="uppercase text-white bg-white/25 text-sm font-light tracking-wider px-3 py-1 rounded-full backdrop-blur-lg">Mobile App</span>
+                    
+                    <!-- next-project link -->
+                    <a class="stretched-link" href="./project-single.html">
+                      <img alt="arrow" loading="lazy" width="25" height="22" class="inline-block rotate-[135deg]" src="./images/arrow-right.svg" />
+                    </a>
+                  </div>
+                  <div class="text-center mt-auto">
+                    <h3 class="text-4xl font-secondary font-semibold text-white mb-2 relative overflow-hidden">
+                      <!-- next-project title -->
+                      <span class="block translate-y-full group-hover:translate-y-0 duration-300">Curoloy</span>
+                    </h3>
+                    <!-- next-project category -->
+                    <p class="text-white font-light relative overflow-hidden">
+                      <span class="block translate-y-full group-hover:translate-y-0 duration-300 group-hover:delay-150">Branding</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end of next-project -->
+          
+    </main>
+    <!-- end of main -->
+
+    <!-- ================= start of footer ================= -->
+    <footer class="pt-28 pb-20 sticky bottom-0 z-[1]">
+      <div class="mb-16 overflow-hidden">
+        <a class="footer-cta block text-4xl md:text-5xl font-secondary font-medium mb-8" href="contact.html">
+          <!-- Scrolling Line 1 -->
+          <div class="animated-line animated-line-one mb-5">
+            <div class="line-block">
+              <span class="mr-20 md:mr-24">
+                <span class="cta-text">Let’s make something</span>
+                <img alt="arrow-right" loading="lazy" width="39" height="31" class="inline-block ml-10 md:ml-16 cta-icon" src="./images/arrow-right.svg" />
+              </span>
+              <span class="mr-20 md:mr-24">
+                <span class="cta-text">Let’s make something</span>
+                <img alt="arrow-right" loading="lazy" width="39" height="31" class="inline-block ml-10 md:ml-16 cta-icon" src="./images/arrow-right.svg" />
+              </span>
+              <span class="mr-20 md:mr-24">
+                <span class="cta-text">Let’s make something</span>
+                <img alt="arrow-right" loading="lazy" width="39" height="31" class="inline-block ml-10 md:ml-16 cta-icon" src="./images/arrow-right.svg" />
+              </span>
+              <span class="mr-20 md:mr-24">
+                <span class="cta-text">Let’s make something</span>
+                <img alt="arrow-right" loading="lazy" width="39" height="31" class="inline-block ml-10 md:ml-16 cta-icon" src="./images/arrow-right.svg" />
+              </span>
+              <span class="mr-20 md:mr-24">
+                <span class="cta-text">Let’s make something</span>
+                <img alt="arrow-right" loading="lazy" width="39" height="31" class="inline-block ml-10 md:ml-16 cta-icon" src="./images/arrow-right.svg" />
+              </span>
+            </div>
+            <div class="line-block-copy">
+              <span class="mr-20 md:mr-24">
+                <span class="cta-text">Let’s make something</span>
+                <img alt="arrow-right" loading="lazy" width="39" height="31" class="inline-block ml-10 md:ml-16 cta-icon" src="./images/arrow-right.svg" />
+              </span>
+              <span class="mr-20 md:mr-24">
+                <span class="cta-text">Let’s make something</span>
+                <img alt="arrow-right" loading="lazy" width="39" height="31" class="inline-block ml-10 md:ml-16 cta-icon" src="./images/arrow-right.svg" />
+              </span>
+              <span class="mr-20 md:mr-24">
+                <span class="cta-text">Let’s make something</span>
+                <img alt="arrow-right" loading="lazy" width="39" height="31" class="inline-block ml-10 md:ml-16 cta-icon" src="./images/arrow-right.svg" />
+              </span>
+              <span class="mr-20 md:mr-24">
+                <span class="cta-text">Let’s make something</span>
+                <img alt="arrow-right" loading="lazy" width="39" height="31" class="inline-block ml-10 md:ml-16 cta-icon" src="./images/arrow-right.svg" />
+              </span>
+              <span class="mr-20 md:mr-24">
+                <span class="cta-text">Let’s make something</span>
+                <img alt="arrow-right" loading="lazy" width="39" height="31" class="inline-block ml-10 md:ml-16 cta-icon" src="./images/arrow-right.svg" />
+              </span>
+            </div>
+          </div>
+          <!-- Scrolling Line 2 -->
+          <div class="animated-line animated-line-two">
+            <div class="line-block">
+              <span class="mr-20 md:mr-24">
+                <span class="cta-text">Let’s make something</span>
+                <img alt="arrow-right" loading="lazy" width="39" height="31" class="inline-block ml-10 md:ml-16 cta-icon" src="./images/arrow-right.svg" />
+              </span>
+              <span class="mr-20 md:mr-24">
+                <span class="cta-text">Let’s make something</span>
+                <img alt="arrow-right" loading="lazy" width="39" height="31" class="inline-block ml-10 md:ml-16 cta-icon" src="./images/arrow-right.svg" />
+              </span>
+              <span class="mr-20 md:mr-24">
+                <span class="cta-text">Let’s make something</span>
+                <img alt="arrow-right" loading="lazy" width="39" height="31" class="inline-block ml-10 md:ml-16 cta-icon" src="./images/arrow-right.svg" />
+              </span>
+              <span class="mr-20 md:mr-24">
+                <span class="cta-text">Let’s make something</span>
+                <img alt="arrow-right" loading="lazy" width="39" height="31" class="inline-block ml-10 md:ml-16 cta-icon" src="./images/arrow-right.svg" />
+              </span>
+              <span class="mr-20 md:mr-24">
+                <span class="cta-text">Let’s make something</span>
+                <img alt="arrow-right" loading="lazy" width="39" height="31" class="inline-block ml-10 md:ml-16 cta-icon" src="./images/arrow-right.svg" />
+              </span>
+            </div>
+            <div class="line-block-copy">
+              <span class="mr-20 md:mr-24">
+                <span class="cta-text">Let’s make something</span>
+                <img alt="arrow-right" loading="lazy" width="39" height="31" class="inline-block ml-10 md:ml-16 cta-icon" src="./images/arrow-right.svg" />
+              </span>
+              <span class="mr-20 md:mr-24">
+                <span class="cta-text">Let’s make something</span>
+                <img alt="arrow-right" loading="lazy" width="39" height="31" class="inline-block ml-10 md:ml-16 cta-icon" src="./images/arrow-right.svg" />
+              </span>
+              <span class="mr-20 md:mr-24">
+                <span class="cta-text">Let’s make something</span>
+                <img alt="arrow-right" loading="lazy" width="39" height="31" class="inline-block ml-10 md:ml-16 cta-icon" src="./images/arrow-right.svg" />
+              </span>
+              <span class="mr-20 md:mr-24">
+                <span class="cta-text">Let’s make something</span>
+                <img alt="arrow-right" loading="lazy" width="39" height="31" class="inline-block ml-10 md:ml-16 cta-icon" src="./images/arrow-right.svg" />
+              </span>
+              <span class="mr-20 md:mr-24">
+                <span class="cta-text">Let’s make something</span>
+                <img alt="arrow-right" loading="lazy" width="39" height="31" class="inline-block ml-10 md:ml-16 cta-icon" src="./images/arrow-right.svg" />
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="md:col-6 text-center md:text-left mb-4">
+            <!-- Social Links -->
+            <ul class="inline-flex flex-wrap justify-center md:justify-start gap-x-6">
+              <li class="inline-block hover:opacity-75 transition-op duration-300">
+                <a href="https://facebook.com/" class="link">Facebook</a>
+              </li>
+              <li class="inline-block hover:opacity-75 transition-op duration-300">
+                <a href="https://twitter.com/" class="link">Twitter</a>
+              </li>
+              <li class="inline-block hover:opacity-75 transition-op duration-300">
+                <a href="https://linkedin.com/" class="link">Linkedin</a>
+              </li>
+              <li class="inline-block hover:opacity-75 transition-op duration-300">
+                <a href="https://github.com/" class="link">Github</a>
+              </li>
+            </ul>
+          </div>
+          <div class="md:col-6 text-center md:text-right mb-4">
+            <!-- Footer Menu -->
+            <ul class="inline-flex flex-wrap justify-center md:justify-end gap-x-6">
+              <li class="inline-block hover:opacity-75 transition-op duration-300">
+                <a href="./index-2.html" class="link">Home v2</a>
+              </li>
+              <li class="inline-block hover:opacity-75 transition-op duration-300">
+                <a href="./privacy.html" class="link">Privacy policy</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Copyright -->
+          <div class="md:col-6 text-center md:text-left mb-4 md:mb-0">
+            <p class="text-white/75">© 2023 Gauarva. All rights reserved.</p>
+          </div>
+          <!-- Developer Info -->
+          <div class="md:col-6 text-center md:text-right">
+            <p class="text-white/75">Developed by <a class="link text-white" href="https://themeforest.net/user/platol/portfolio" target="_blank" rel="noopener noreferrer">Platol</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ================= end of footer ================= -->
+
+    <!-- start of script -->
+    <script src="./plugins/aos/aos.js"></script>
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>
