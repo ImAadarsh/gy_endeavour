@@ -210,7 +210,7 @@
     const submitBtnRef = contactFormRef.querySelector("button[type='submit']");
     const submitBtnTextRef = submitBtnRef.innerHTML;
     const statusRef = contactFormRef.querySelector(".status");
-    const emailAddress = "Endeavour Digitaltheme@gmail.com";
+    const emailAddress = "aadarshkavita@gmail.com";
     const formsubmitURL = `https://formsubmit.co/ajax/${emailAddress}`;
 
     const formHandler = (e) => {
