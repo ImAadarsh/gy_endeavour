@@ -251,4 +251,179 @@
   }
 
   // =========================== End of Contact form =========================== //
+
+  // =========================== Start of Video Slider =========================== //
+  window.addEventListener("load", () => {
+    const videoSlider = document.querySelector(".video-slider");
+    if (videoSlider !== null) {
+      const sliderTrack = videoSlider.querySelector(".video-slider-track");
+      const slides = videoSlider.querySelectorAll(".video-slide");
+      const prevBtn = videoSlider.querySelector(".video-prev");
+      const nextBtn = videoSlider.querySelector(".video-next");
+      const videoThumbs = videoSlider.querySelectorAll(".video-thumb");
+      const slideIndicators = videoSlider.querySelectorAll(".slide-indicator");
+      
+      // Each slide now represents a full slide with 3 videos
+      let currentIndex = 0;
+      const totalSlides = slides.length;
+      
+      // Update slide position and indicators
+      const updateSlidePosition = () => {
+        // Move the track to the current slide position
+        sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+        
+        // Update the active indicator
+        slideIndicators.forEach((indicator, index) => {
+          if (index === currentIndex) {
+            indicator.classList.add("bg-primary/80");
+            indicator.classList.remove("bg-white/20");
+          } else {
+            indicator.classList.remove("bg-primary/80");
+            indicator.classList.add("bg-white/20");
+          }
+        });
+      };
+      
+      // Handle next button click
+      nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateSlidePosition();
+      });
+      
+      // Handle prev button click
+      prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateSlidePosition();
+      });
+      
+      // Handle indicator clicks
+      slideIndicators.forEach((indicator, index) => {
+        indicator.addEventListener("click", () => {
+          currentIndex = index;
+          updateSlidePosition();
+        });
+      });
+      
+      // YouTube video player functionality
+      const createYoutubeModal = () => {
+        const modal = document.createElement("div");
+        modal.className = "fixed inset-0 bg-black/95 z-[9999] flex items-center justify-center";
+        modal.id = "youtube-modal";
+        
+        const container = document.createElement("div");
+        container.className = "relative w-full max-w-5xl mx-4 shadow-2xl";
+        
+        const closeBtn = document.createElement("button");
+        closeBtn.className = "absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors p-2";
+        closeBtn.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        `;
+        
+        const videoContainer = document.createElement("div");
+        videoContainer.className = "relative pb-[56.25%] h-0 overflow-hidden bg-black rounded-lg";
+        
+        // Create iframe directly with all necessary attributes
+        const iframe = document.createElement("iframe");
+        iframe.id = "youtube-iframe";
+        iframe.className = "absolute top-0 left-0 w-full h-full";
+        iframe.setAttribute("frameborder", "0");
+        iframe.setAttribute("allowfullscreen", "true");
+        iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
+        
+        videoContainer.appendChild(iframe);
+        container.appendChild(closeBtn);
+        container.appendChild(videoContainer);
+        modal.appendChild(container);
+        
+        // Close modal function
+        const closeModal = () => {
+          const iframe = document.getElementById("youtube-iframe");
+          if (iframe) {
+            iframe.src = "";
+          }
+          
+          // Add fade-out animation
+          modal.classList.add("opacity-0");
+          setTimeout(() => {
+            modal.remove();
+            document.body.classList.remove("overflow-hidden");
+          }, 300);
+        };
+        
+        // Close modal on button click
+        closeBtn.addEventListener("click", closeModal);
+        
+        // Close modal when clicking outside the video container
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) {
+            closeModal();
+          }
+        });
+        
+        // Close modal on ESC key
+        const handleEscKey = (e) => {
+          if (e.key === "Escape") {
+            closeModal();
+          }
+        };
+        
+        document.addEventListener("keydown", handleEscKey);
+        
+        // Clean up event listener when modal is closed
+        modal.addEventListener("remove", () => {
+          document.removeEventListener("keydown", handleEscKey);
+        });
+        
+        return { modal, iframe };
+      };
+      
+      // Add click event to video thumbnails
+      videoThumbs.forEach(thumb => {
+        thumb.addEventListener("click", () => {
+          const videoId = thumb.getAttribute("data-video-id");
+          
+          // Create the modal
+          const { modal, iframe } = createYoutubeModal();
+          
+          // Add fade-in animation
+          modal.style.opacity = "0";
+          document.body.appendChild(modal);
+          document.body.classList.add("overflow-hidden");
+          
+          // Set iframe source with videoId after modal is in DOM
+          setTimeout(() => {
+            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+            modal.style.opacity = "1";
+            modal.style.transition = "opacity 0.3s ease-in-out";
+          }, 10);
+        });
+      });
+      
+      // Auto-play slider (optional)
+      /* 
+      let sliderInterval;
+      const startAutoplay = () => {
+        sliderInterval = setInterval(() => {
+          currentIndex = (currentIndex + 1) % totalSlides;
+          updateSlidePosition();
+        }, 5000); // Change slide every 5 seconds
+      };
+      
+      const stopAutoplay = () => {
+        clearInterval(sliderInterval);
+      };
+      
+      // Start autoplay
+      startAutoplay();
+      
+      // Pause autoplay on hover
+      videoSlider.addEventListener('mouseenter', stopAutoplay);
+      videoSlider.addEventListener('mouseleave', startAutoplay);
+      */
+    }
+  });
+  // =========================== End of Video Slider =========================== //
 })();
