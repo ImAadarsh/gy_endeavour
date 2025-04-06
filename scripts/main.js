@@ -222,7 +222,7 @@
         method: "POST",
         headers: { "Content-type": "application/json" },
         body: JSON.stringify({
-          _subject: "Message form Gauarva Html!",
+          _subject: "Message form Gauarva Yadav's Personal Website!",
           name: full_name.value,
           email: email.value,
           message: message.value,
@@ -393,7 +393,7 @@
       console.log("Video slider loaded");
       // Auto-play slider (optional)
       /* 
-      let sliderInterval;
+      let sliderInterval;     
       const startAutoplay = () => {
         sliderInterval = setInterval(() => {
           currentIndex = (currentIndex + 1) % totalSlides;
