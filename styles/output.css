@@ -2081,7 +2081,7 @@ footer::after{
   }
 }
 
-/* has-twoColumns project */
+/* has-twoColumns Platforms */
 
 @media screen and (max-width: 1023px) {
   .has-twoColumns {
@@ -3553,6 +3553,10 @@ select:-webkit-autofill:focus {
   resize: both;
 }
 
+.list-disc{
+  list-style-type: disc;
+}
+
 .columns-1{
   -moz-columns: 1;
        columns: 1;
@@ -3715,6 +3719,12 @@ select:-webkit-autofill:focus {
   --tw-space-x-reverse: 0;
   margin-right: calc(2rem * var(--tw-space-x-reverse));
   margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-y-2 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
 .space-y-4 > :not([hidden]) ~ :not([hidden]){
@@ -4159,6 +4169,10 @@ select:-webkit-autofill:focus {
 
 .pl-4{
   padding-left: 1rem;
+}
+
+.pl-6{
+  padding-left: 1.5rem;
 }
 
 .pl-7{
