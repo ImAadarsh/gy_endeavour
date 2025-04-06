@@ -1,0 +1,14 @@
+# Disable directory browsing
+Options -Indexes
+
+# Deny access to .htaccess
+<Files .htaccess>
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Allow only specific IP addresses (optional - uncomment and add your IP)
+# Order deny,allow
+# Deny from all
+# Allow from 127.0.0.1 
+# Allow from your-ip-address 
