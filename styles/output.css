@@ -3248,10 +3248,6 @@ select:-webkit-autofill:focus {
   height: 250px;
 }
 
-.h-\[376px\]{
-  height: 376px;
-}
-
 .h-\[460px\]{
   height: 460px;
 }
@@ -3368,6 +3364,10 @@ select:-webkit-autofill:focus {
   flex-shrink: 0;
 }
 
+.flex-grow{
+  flex-grow: 1;
+}
+
 .grow{
   flex-grow: 1;
 }
@@ -3453,6 +3453,12 @@ select:-webkit-autofill:focus {
 .rotate-\[36deg\]{
   --tw-rotate: 36deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.\!scale-125{
+  --tw-scale-x: 1.25 !important;
+  --tw-scale-y: 1.25 !important;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
 }
 
 .scale-0{
